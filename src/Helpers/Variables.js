@@ -33,14 +33,3 @@ export const headingTertiary = {
   lineHeight: "26px",
   letterSpacing: "5px",
 };
-
-// export const body={
-//     font-family: Jost;
-// font-size: 16px;
-// font-style: normal;
-// font-weight: 400;
-// line-height: 26px;
-// letter-spacing: 0px;
-// text-align: left;
-
-// }
