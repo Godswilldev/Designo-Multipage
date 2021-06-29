@@ -39,6 +39,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 26px;
         letter-spacing: 0px;
         background-color: ${variables.secondaryColors.lightGrey};
+        width: 100%;
     }
 `;
 export default GlobalStyles;

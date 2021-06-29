@@ -1,6 +1,6 @@
 export const primaryColors = {
   peach: "#E7816B",
-  black: "#1D1CIE",
+  black: "#1D1C1E",
   white: "#FFFFFF",
 };
 
