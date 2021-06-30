@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import navlogo from "../../assets/shared/desktop/logo-light.png";
 import styled from "styled-components";
 import * as variables from "../../Helpers/Variables";
+import { device } from "../../Helpers/MediaQueries";
 import twitter from "../../assets/shared/desktop/icon-twitter.svg";
 import facebook from "../../assets/shared/desktop/icon-facebook.svg";
 import instagram from "../../assets/shared/desktop/icon-instagram.svg";
@@ -17,6 +18,9 @@ const Footers = styled.footer`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media ${device.tablet} {
+      height: 100%;
+    }
 
     .footer__nav {
       display: flex;
@@ -27,6 +31,11 @@ const Footers = styled.footer`
         width: 15rem;
       }
 
+      @media ${device.tablet} {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .links {
         text-decoration: none;
         color: ${variables.primaryColors.white};
@@ -34,9 +43,20 @@ const Footers = styled.footer`
         text-transform: uppercase;
         &:not(:last-child) {
           margin-right: 4rem;
+          @media ${device.tablet} {
+            margin-right: 0;
+          }
+        }
+
+        @media ${device.tablet} {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
+
     .footer__details {
       color: ${variables.primaryColors.white};
       display: flex;
@@ -45,15 +65,20 @@ const Footers = styled.footer`
       margin-top: 5rem;
 
       &--links :not(:last-child) {
-        margin-right: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+      }
+
+      @media ${device.tablet} {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        & :not(:last-child) {
+          margin-bottom: 5rem;
+        }
       }
     }
-  }
-
-  hr {
-    width: 100%;
-    color: #000;
-    height: 10rem;
   }
 `;
 
@@ -75,6 +100,7 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
+
         <div className="footer__details">
           <p className="footer__details--address">
             Designo Central Office <br /> 3886 Wellington Street <br /> Toronto,
@@ -90,15 +116,9 @@ const Footer = () => {
             <img src={instagram} alt="instagram link" />
             <img src={pinterest} alt="pinterest link" />
             <img src={youtube} alt="youtube link" />
-            {/* <Link className="link" to=""></Link>
-            <Link to=""></Link>
-            <Link to=""></Link>
-            <Link to=""></Link>
-            <Link to=""></Link> */}
           </div>
         </div>
       </div>
-      {/* <hr /> */}
     </Footers>
   );
 };
