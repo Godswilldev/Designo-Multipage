@@ -13,6 +13,7 @@ export const Nav = styled.nav`
   text-transform: uppercase;
   position: relative;
   width: 100%;
+  margin-bottom: 1rem;
   .navLogo {
     width: 15rem;
     @media ${device.tablet} {
@@ -26,14 +27,13 @@ export const Nav = styled.nav`
     color: ${variables.primaryColors.black};
 
     @media ${device.tablet} {
-      /* display: none; */
       display: flex;
       position: absolute;
       flex-direction: column;
       background-color: ${variables.primaryColors.black};
       transition: 0.5s all;
       top: 9rem;
-      height: 40vh;
+      height: 90vh;
       width: 100%;
       left: ${({ toggle }) => (toggle ? "-200vw" : "0")};
       visibility: ${({ toggle }) => (toggle ? "hidden" : "visible")};
