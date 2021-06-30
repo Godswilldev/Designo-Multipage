@@ -74,7 +74,7 @@ const Footers = styled.footer`
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        & :not(:last-child) {
+        & > * {
           margin-bottom: 5rem;
         }
       }
