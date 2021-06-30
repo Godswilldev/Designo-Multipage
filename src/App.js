@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Globalstyles from "./Helpers/Globalstyes";
 import { device } from "./Helpers/MediaQueries";
@@ -19,6 +20,7 @@ const App = () => {
       <Apps>
         <Navbar />
       </Apps>
+      <Footer />
     </>
   );
 };
