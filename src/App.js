@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Footer from "./Components/Footer/Footer";
+import LetsTalk from "./Components/LetsTalk/LetsTalk";
 import Navbar from "./Components/Navbar/Navbar";
 import Globalstyles from "./Helpers/Globalstyes";
 import { device } from "./Helpers/MediaQueries";
@@ -19,6 +20,7 @@ const App = () => {
       <Globalstyles />
       <Apps>
         <Navbar />
+        <LetsTalk />
       </Apps>
       <Footer />
     </>

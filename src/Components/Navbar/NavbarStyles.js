@@ -5,6 +5,7 @@ import * as variables from "../../Helpers/Variables";
 import { device } from "../../Helpers/MediaQueries";
 
 export const Nav = styled.nav`
+  z-index: 99;
   display: flexbox;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +34,7 @@ export const Nav = styled.nav`
       background-color: ${variables.primaryColors.black};
       transition: 0.5s all;
       top: 9rem;
-      height: 90vh;
+      height: 40vh;
       width: 100%;
       left: ${({ toggle }) => (toggle ? "-200vw" : "0")};
       visibility: ${({ toggle }) => (toggle ? "hidden" : "visible")};
