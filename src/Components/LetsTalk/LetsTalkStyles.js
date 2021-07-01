@@ -4,6 +4,7 @@ import { device } from "../../Helpers/MediaQueries";
 
 export const Talk = styled.div`
   position: relative;
+  overflow: hidden;
   bottom: -7rem;
   height: 292px;
   background-color: ${variables.primaryColors.peach};
@@ -40,5 +41,10 @@ export const Talk = styled.div`
     .btn {
       margin: 4rem;
     }
+  }
+
+  .circles {
+    position: absolute;
+    right: 0;
   }
 `;
