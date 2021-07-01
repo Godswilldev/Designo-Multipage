@@ -12,7 +12,7 @@ const Design = styled.div`
   grid-template-columns: repeat(2, 47.5%);
   grid-template-rows: repeat(2, 47.5%);
   grid-gap: 5%;
-  height: 50rem;
+  height: 64rem;
 
   & > * {
     border-radius: 1rem;
