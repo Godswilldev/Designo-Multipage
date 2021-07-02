@@ -29,6 +29,7 @@ const Web = styled.div`
     grid-template-rows: 1fr;
     grid-gap: 5rem;
     margin-top: 15rem;
+    margin-bottom: 10rem;
   }
 `;
 
