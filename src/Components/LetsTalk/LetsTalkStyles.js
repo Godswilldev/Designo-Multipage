@@ -6,6 +6,7 @@ export const Talk = styled.div`
   position: relative;
   overflow: hidden;
   bottom: -7rem;
+  width: 85%;
   height: 292px;
   background-color: ${variables.primaryColors.peach};
   display: flex;

@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Route, Switch } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import LetsTalk from "./Components/LetsTalk/LetsTalk";
 import Navbar from "./Components/Navbar/Navbar";
 import Globalstyles from "./Helpers/Globalstyes";
 import { device } from "./Helpers/MediaQueries";
+import WebDesign from "./Components/WebDesign/WebDesign";
 
 const Apps = styled.div`
   width: 85%;
@@ -23,9 +25,12 @@ const App = () => {
       <Globalstyles />
       <Apps>
         <Navbar />
-        <Home />
-        <LetsTalk />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/web" component={WebDesign} />
+        </Switch>
       </Apps>
+      <LetsTalk />
       <Footer />
     </>
   );

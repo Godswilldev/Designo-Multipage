@@ -8,9 +8,9 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <Nav toggle={toggle}>
-      <div>
+      <Link to="/">
         <img className="navLogo" src={navlogo} alt="nav-logo" />
-      </div>
+      </Link>
       <ul>
         <Link className="links" to="/company">
           our company
