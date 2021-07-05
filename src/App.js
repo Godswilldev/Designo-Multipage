@@ -8,6 +8,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Globalstyles from "./Helpers/Globalstyes";
 import { device } from "./Helpers/MediaQueries";
 import WebDesign from "./Components/WebDesign/WebDesign";
+import AppDesign from "./Components/AppDesign/AppDesign";
+import GraphicsDesign from "./Components/GraphicsDesign/GraphicsDesign";
 
 const Apps = styled.div`
   width: 85%;
@@ -19,7 +21,7 @@ const Apps = styled.div`
   }
 `;
 
-const App = () => {
+const App = () => {   
   return (
     <>
       <Globalstyles />
@@ -28,6 +30,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/web" component={WebDesign} />
+          <Route exact path="/app" component={AppDesign} />
+          <Route exact path="/graphics" component={GraphicsDesign} />
         </Switch>
       </Apps>
       <LetsTalk />

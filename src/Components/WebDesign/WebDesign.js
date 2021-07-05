@@ -12,7 +12,7 @@ import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
 import styled from "styled-components";
 import DesignTypes from "./DesignTypes";
 
-const Web = styled.div`
+export const Web = styled.div`
   width: 100%;
   .designFeatures {
     margin-top: 15rem;
