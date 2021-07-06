@@ -11,6 +11,9 @@ const GlobalStyles = createGlobalStyle`
 
     html{
         box-sizing: border-box;
+        @media ${device.desktop}{
+            font-size: 80%;
+        }
         @media ${device.laptopL}{
             font-size: 62.5%;
         }

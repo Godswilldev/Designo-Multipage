@@ -10,7 +10,9 @@ import { device } from "./Helpers/MediaQueries";
 import WebDesign from "./Components/WebDesign/WebDesign";
 import AppDesign from "./Components/AppDesign/AppDesign";
 import GraphicsDesign from "./Components/GraphicsDesign/GraphicsDesign";
-
+import AboutUs from "./Components/About/AboutUs";
+import Location from "./Components/Location/Location";
+import ContactUs from "./Components/Contact/ContactUs";
 const Apps = styled.div`
   width: 85%;
   margin: 0 auto;
@@ -21,7 +23,7 @@ const Apps = styled.div`
   }
 `;
 
-const App = () => {   
+const App = () => {
   return (
     <>
       <Globalstyles />
@@ -32,6 +34,9 @@ const App = () => {
           <Route exact path="/web" component={WebDesign} />
           <Route exact path="/app" component={AppDesign} />
           <Route exact path="/graphics" component={GraphicsDesign} />
+          <Route exact path="/company" component={AboutUs} />
+          <Route exact path="/contact" component={ContactUs} />
+          <Route exact path="/location" component={Location} />
         </Switch>
       </Apps>
       <LetsTalk />
