@@ -4,11 +4,16 @@ import aboutImg from "../../assets/about/desktop/image-about-hero.jpg";
 import talent from "../../assets/about/desktop/image-world-class-talent.jpg";
 import real_deal from "../../assets/about/desktop/image-real-deal.jpg";
 import bg_pattern from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
+import two_circles from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
 import * as variables from "../../Helpers/Variables";
+import Country from "../Location/Country";
 
 const About = styled.div`
   margin-top: 5rem;
   color: ${variables.primaryColors.white};
+  .locations {
+    margin-top: 15rem;
+  }
   .styledtext {
     padding: 0 8rem;
     position: relative;
@@ -51,6 +56,16 @@ const About = styled.div`
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 15rem;
+
+    .styledtext {
+      background-color: #fdf3f0;
+      h1 {
+        color: ${variables.primaryColors.peach};
+      }
+      p {
+        color: ${variables.primaryColors.black};
+      }
+    }
   }
   .about__company {
     display: grid;
@@ -58,7 +73,16 @@ const About = styled.div`
     height: 64rem;
     border-radius: 1rem;
     overflow: hidden;
-    margin-top: 15rem;
+    margin: 15rem 0;
+    .styledtext {
+      background-color: #fdf3f0;
+      h1 {
+        color: ${variables.primaryColors.peach};
+      }
+      p {
+        color: ${variables.primaryColors.black};
+      }
+    }
   }
 `;
 
@@ -99,8 +123,12 @@ const AboutUs = () => {
             high-quality outcomes that encapsulates their brand’s story and
             mission.
           </p>
-          <img src={bg_pattern} alt="bg pattern" />
+          <img src={two_circles} alt="bg pattern" />
         </div>
+      </div>
+
+      <div className="locations">
+        <Country />
       </div>
 
       <div className="about__company">
@@ -116,7 +144,7 @@ const AboutUs = () => {
             business and marketing strategies, we inspire audiences to take
             action and drive real results.
           </p>
-          <img src={bg_pattern} alt="bg pattern" />
+          <img src={two_circles} alt="bg pattern" />
         </div>
 
         <div className="styledImg about__company--img">

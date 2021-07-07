@@ -11,7 +11,7 @@ import WebDesign from "./Components/WebDesign/WebDesign";
 import AppDesign from "./Components/AppDesign/AppDesign";
 import GraphicsDesign from "./Components/GraphicsDesign/GraphicsDesign";
 import AboutUs from "./Components/About/AboutUs";
-import Location from "./Components/Location/Location";
+import Locations from "./Components/Location/Locations";
 import ContactUs from "./Components/Contact/ContactUs";
 const Apps = styled.div`
   width: 85%;
@@ -36,7 +36,7 @@ const App = () => {
           <Route exact path="/graphics" component={GraphicsDesign} />
           <Route exact path="/company" component={AboutUs} />
           <Route exact path="/contact" component={ContactUs} />
-          <Route exact path="/location" component={Location} />
+          <Route exact path="/location" component={Locations} />
         </Switch>
       </Apps>
       <LetsTalk />
