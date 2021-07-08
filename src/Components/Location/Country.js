@@ -6,13 +6,17 @@ import australia from "../../assets/shared/desktop/illustration-australia.svg";
 import united_kingdom from "../../assets/shared/desktop/illustration-united-kingdom.svg";
 import Button from "../../Components/Button/Button";
 import * as variables from "../../Helpers/Variables";
-
+import { device } from "../../Helpers/MediaQueries";
 const StyledCountry = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   color: ${variables.primaryColors.black};
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 
   .country {
     display: flex;
@@ -25,9 +29,14 @@ const StyledCountry = styled.div`
       font-size: 1.8rem;
       letter-spacing: 1rem;
       margin-bottom: 4rem;
+
+      @media ${device.tablet} {
+        margin-bottom: 2rem;
+      }
     }
-    a {
-      text-decoration: none;
+
+    @media ${device.tablet} {
+      margin-bottom: 10rem;
     }
   }
 `;

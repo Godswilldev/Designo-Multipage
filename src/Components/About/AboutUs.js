@@ -7,7 +7,7 @@ import bg_pattern from "../../assets/about/desktop/bg-pattern-hero-about-desktop
 import two_circles from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
 import * as variables from "../../Helpers/Variables";
 import Country from "../Location/Country";
-
+import { device } from "../../Helpers/MediaQueries";
 const About = styled.div`
   margin-top: 5rem;
   color: ${variables.primaryColors.white};
@@ -23,6 +23,9 @@ const About = styled.div`
     justify-content: center;
     overflow: hidden;
     text-align: justify;
+    @media ${device.tablet} {
+      padding: 0 4rem;
+    }
 
     h1 {
       margin-bottom: 3rem;
@@ -39,6 +42,11 @@ const About = styled.div`
       width: 100%;
       height: 100%;
     }
+    @media ${device.tablet} {
+      order: -1;
+    }
+  }
+  .about {
   }
 
   .about__header {
@@ -47,6 +55,21 @@ const About = styled.div`
     height: 48rem;
     border-radius: 1rem;
     overflow: hidden;
+
+    @media ${device.tablet} {
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50rem 40rem;
+    }
+    @media ${device.mobileL} {
+      grid-template-rows: 40rem 50rem;
+    }
+    @media ${device.mobileM} {
+      grid-template-rows: 40rem 55rem;
+    }
+    @media ${device.mobileS} {
+      grid-template-rows: 40rem 65rem;
+    }
   }
 
   .about__talent {
@@ -56,6 +79,21 @@ const About = styled.div`
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 15rem;
+
+    @media ${device.tablet} {
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50rem 40rem;
+    }
+    @media ${device.mobileL} {
+      grid-template-rows: 40rem 60rem;
+    }
+    @media ${device.mobileM} {
+      grid-template-rows: 40rem 65rem;
+    }
+    @media ${device.mobileS} {
+      grid-template-rows: 40rem 90rem;
+    }
 
     .styledtext {
       background-color: #fdf3f0;
@@ -83,13 +121,28 @@ const About = styled.div`
         color: ${variables.primaryColors.black};
       }
     }
+
+    @media ${device.tablet} {
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50rem 40rem;
+    }
+    @media ${device.mobileL} {
+      grid-template-rows: 40rem 60rem;
+    }
+    @media ${device.mobileM} {
+      grid-template-rows: 40rem 65rem;
+    }
+    @media ${device.mobileS} {
+      grid-template-rows: 40rem 90rem;
+    }
   }
 `;
 
 const AboutUs = () => {
   return (
     <About>
-      <div className="about__header">
+      <div className="about about__header">
         <div className="styledtext about__header--text">
           <h1>About us</h1>
           <p>
@@ -106,7 +159,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="about__talent">
+      <div className="about about__talent">
         <div className="styledImg about__talent--img">
           <img src={talent} alt="world class talent img" />
         </div>
@@ -131,7 +184,7 @@ const AboutUs = () => {
         <Country />
       </div>
 
-      <div className="about__company">
+      <div className="about about__company">
         <div className="styledtext about__company--text">
           <h1>The Real Deal</h1>
           <p>
