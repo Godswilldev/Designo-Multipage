@@ -3,6 +3,7 @@ import * as variables from "../../Helpers/Variables";
 
 export const Btn = styled.div`
   .btn {
+    display: inline;
     border: none;
     outline: none;
     cursor: pointer;
