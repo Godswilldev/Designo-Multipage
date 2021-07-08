@@ -123,7 +123,7 @@ const Locations = () => {
                   <p>Contact</p>
                 </strong>
                 <p>
-                  Contact P : (02) 6720 9092
+                  P : (02) 6720 9092
                   <br /> M : contact@designo.au
                 </p>
               </div>

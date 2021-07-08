@@ -1,7 +1,46 @@
 import React from "react";
+import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import Buttons from "../../Components/Button/Button";
-export default function Form() {
+import errorIcon from "../../assets/contact/desktop/icon-error.svg";
+import * as variables from "../../Helpers/Variables";
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid ${variables.secondaryColors.lightGrey};
+    background-color: transparent;
+    padding: 1rem;
+    margin-left: auto;
+    width: 35rem;
+    margin-bottom: 1rem;
+    &::placeholder {
+      color: ${variables.secondaryColors.lightGrey};
+    }
+  }
+  textarea {
+    margin-top: 2rem;
+  }
+
+  .error__message {
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+  }
+  .error__icon {
+    width: 1rem;
+  }
+  .submit {
+    margin-top: 1.5rem;
+  }
+`;
+
+const Form = () => {
   const {
     register,
     handleSubmit,
@@ -17,20 +56,37 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <input
         type="text"
-        placeholder="First"
+        placeholder="First Name"
         {...register("First", { required: true, maxLength: 80 })}
       />
-      {errors.First && <span>This field is required</span>}
+      {errors.First && (
+        <span className="error__message">
+          Can't be empty{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+
       <input
         type="text"
         placeholder="Email"
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
       />
-      {errors.Email?.type === "required" && "Email is required"}
-      {errors.Email?.type === "pattern" && "Invalid Email Address"}
+      {errors.Email?.type === "required" && (
+        <span className="error__message">
+          Email is required{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+      {errors.Email?.type === "pattern" && (
+        <span className="error__message">
+          Invalid Email Address{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+
       <input
         type="tel"
         placeholder="Mobile number"
@@ -40,16 +96,40 @@ export default function Form() {
           maxLength: 12,
         })}
       />
-      {errors.mobile?.type === "required" && "This field is required"}
-      {errors.mobile?.type === "minLength" &&
-        "Phone number must be greater than 6 characters"}
-      {errors.mobile?.type === "maxLength" &&
-        "Phone number must be less than 12 characters"}
-      <textarea {...register("Message", { required: true })} />
-      {errors.Message && <span>This field is required</span>}
-      <span onClick={handleSubmit(onSubmit)}>
-        <Buttons text="submit" col="onLight" />
+      {errors.mobile?.type === "required" && (
+        <span className="error__message">
+          This field is required{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+      {errors.mobile?.type === "minLength" && (
+        <span className="error__message">
+          Phone Number must be greater than 6 characters{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+      {errors.mobile?.type === "maxLength" && (
+        <span className="error__message">
+          Phone number must be less than 12 characters{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+
+      <textarea
+        placeholder="Your Message"
+        {...register("Message", { required: true })}
+      />
+      {errors.Message && (
+        <span className="error__message">
+          This field is required{" "}
+          <img className="error__icon" src={errorIcon} alt="error Icon" />
+        </span>
+      )}
+
+      <span className="submit" onClick={handleSubmit(onSubmit)}>
+        <Buttons text="submit" col="onDark" />
       </span>
-    </form>
+    </StyledForm>
   );
-}
+};
+export default Form;
