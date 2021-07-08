@@ -10,7 +10,7 @@ import loopstudios from "../../assets/app-design/desktop/image-loopstudios.jpg";
 import web from "../../assets/home/desktop/image-web-design-large.jpg";
 import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
 import { Web } from "../WebDesign/WebDesign";
-
+import { Link } from "react-router-dom";
 const AppDesign = () => {
   return (
     <Web>
@@ -48,16 +48,23 @@ const AppDesign = () => {
         />
       </div>
       <div className="designs">
-        <DesignTypes
-          img={web}
-          title="web design"
-          paragraphText="view project"
-        />
-        <DesignTypes
-          img={graphic}
-          title="graphic design"
-          paragraphText="view project"
-        />
+        <Link to="/web">
+          {" "}
+          <DesignTypes
+            img={web}
+            title="web design"
+            paragraphText="view project"
+          />
+        </Link>
+
+        <Link to="/graphics">
+          {" "}
+          <DesignTypes
+            img={graphic}
+            title="graphic design"
+            paragraphText="view project"
+          />
+        </Link>
       </div>
     </Web>
   );

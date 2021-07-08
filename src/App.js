@@ -18,8 +18,14 @@ const Apps = styled.div`
   margin: 0 auto;
   position: relative;
 
+  @media ${device.laptop} {
+    width: 90%;
+  }
   @media ${device.tablet} {
     width: 95%;
+  }
+  @media ${device.mobileL} {
+    width: 98%;
   }
 `;
 

@@ -11,12 +11,12 @@ import app from "../../assets/home/desktop/image-app-design.jpg";
 import graphic from "../../assets/home/desktop/image-graphic-design.jpg";
 import styled from "styled-components";
 import DesignTypes from "./DesignTypes";
+import { Link } from "react-router-dom";
 
 export const Web = styled.div`
   width: 100%;
   .designFeatures {
     margin-top: 15rem;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: 1fr;
@@ -74,16 +74,21 @@ const WebDesign = () => {
         />
       </div>
       <div className="designs">
-        <DesignTypes
-          img={app}
-          title="app design"
-          paragraphText="view project"
-        />
-        <DesignTypes
-          img={graphic}
-          title="graphic design"
-          paragraphText="view project"
-        />
+        <Link to="/app">
+          <DesignTypes
+            img={app}
+            title="app design"
+            paragraphText="view project"
+          />
+        </Link>
+
+        <Link to="/graphics">
+          <DesignTypes
+            img={graphic}
+            title="graphic design"
+            paragraphText="view project"
+          />
+        </Link>
       </div>
     </Web>
   );

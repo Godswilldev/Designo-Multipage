@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as variables from "../../Helpers/Variables";
 import circles from "../../assets/web-design/desktop/bg-pattern-intro-web.svg";
-
+import { device } from "../../Helpers/MediaQueries";
 const HeroDesign = styled.div`
   position: relative;
   overflow: hidden;
@@ -17,12 +17,19 @@ const HeroDesign = styled.div`
   border-radius: 1rem;
   margin-top: 5rem;
   width: 100%;
+  @media ${device.mobileL} {
+    height: 100%;
+    padding: 5rem 0;
+  }
   h1 {
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   p {
     width: 50%;
+    @media ${device.mobileL} {
+      width: 75%;
+    }
   }
   .circle {
     position: absolute;

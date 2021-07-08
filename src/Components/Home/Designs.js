@@ -5,6 +5,7 @@ import app from "../../assets/home/desktop/image-app-design.jpg";
 import graphics from "../../assets/home/desktop/image-graphic-design.jpg";
 import * as variables from "../../Helpers/Variables";
 import { Link } from "react-router-dom";
+import { device } from "../../Helpers/MediaQueries";
 const Design = styled.div`
   margin-top: 15rem;
   display: grid;
@@ -14,6 +15,10 @@ const Design = styled.div`
   grid-gap: 5%;
   height: 64rem;
 
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
   & > * {
     border-radius: 1rem;
     background-position: center;
@@ -28,12 +33,23 @@ const Design = styled.div`
     h1 {
       margin-bottom: 2rem;
       font-weight: 500;
+      @media ${device.mobileL} {
+        font-size: 3rem;
+      }
+    }
+    @media ${device.mobileL} {
+      p {
+        font-size: 2rem;
+      }
     }
   }
   .web {
     grid-row: 1/-1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${web});
+    @media ${device.tablet} {
+      grid-row: unset;
+    }
   }
   .app {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

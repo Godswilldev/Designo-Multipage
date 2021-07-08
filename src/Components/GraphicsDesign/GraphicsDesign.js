@@ -8,6 +8,7 @@ import change from "../../assets/graphic-design/desktop/image-change.jpg";
 import boxed_water from "../../assets/graphic-design/desktop/image-boxed-water.jpg";
 import web from "../../assets/home/desktop/image-web-design-large.jpg";
 import app from "../../assets/home/desktop/image-app-design.jpg";
+import { Link } from "react-router-dom";
 const GraphicsDesign = () => {
   return (
     <Web>
@@ -33,16 +34,21 @@ const GraphicsDesign = () => {
         />
       </div>
       <div className="designs">
-        <DesignTypes
-          img={app}
-          title="app design"
-          paragraphText="view project"
-        />
-        <DesignTypes
-          img={web}
-          title="web design"
-          paragraphText="view project"
-        />
+        <Link to="/app">
+          <DesignTypes
+            img={app}
+            title="app design"
+            paragraphText="view project"
+          />
+        </Link>
+
+        <Link to="/web">
+          <DesignTypes
+            img={web}
+            title="web design"
+            paragraphText="view project"
+          />
+        </Link>
       </div>
     </Web>
   );
