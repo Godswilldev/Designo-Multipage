@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Buttons from "../../Components/Button/Button";
 import errorIcon from "../../assets/contact/desktop/icon-error.svg";
 import * as variables from "../../Helpers/Variables";
+import { device } from "../../Helpers/MediaQueries";
 
 const StyledForm = styled.form`
   display: flex;
@@ -22,6 +23,12 @@ const StyledForm = styled.form`
     &::placeholder {
       color: ${variables.secondaryColors.lightGrey};
     }
+
+    @media ${device.tablet} {
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
   }
   textarea {
     margin-top: 2rem;
@@ -37,6 +44,10 @@ const StyledForm = styled.form`
   }
   .submit {
     margin-top: 1.5rem;
+
+    @media ${device.tablet} {
+      margin-bottom: 5rem;
+    }
   }
 `;
 

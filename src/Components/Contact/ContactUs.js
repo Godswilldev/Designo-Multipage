@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Form from "./Form";
 import Country from "../../Components/Location/Country";
 import * as variables from "../../Helpers/Variables";
-
+import { device } from "../../Helpers/MediaQueries";
 const StyledContact = styled.div`
   .contact {
     margin-top: 5rem;
@@ -22,6 +22,27 @@ const StyledContact = styled.div`
         margin-bottom: 3rem;
         font-weight: 500;
       }
+
+      @media ${device.mobileL} {
+        margin-bottom: 5rem;
+      }
+    }
+
+    @media ${device.tablet} {
+      height: 100%;
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      /* margin: 0 auto;
+      text-align: center; */
+      br {
+        display: none;
+      }
+    }
+
+    @media ${device.mobileL} {
+      padding: 5rem;
     }
   }
 

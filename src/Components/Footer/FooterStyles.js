@@ -17,10 +17,10 @@ export const Footers = styled.footer`
     .footer__nav {
       display: flex;
       justify-content: space-between;
-      margin-top: 10rem;
+      margin-top: 15rem;
 
       .footerLogo {
-        width: 15rem;
+        width: 25rem;
       }
 
       @media ${device.tablet} {
@@ -45,6 +45,7 @@ export const Footers = styled.footer`
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          font-size: 2rem;
         }
       }
     }
@@ -65,7 +66,7 @@ export const Footers = styled.footer`
         flex-direction: column;
         align-items: center;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         & > * {
           margin-bottom: 5rem;
         }
