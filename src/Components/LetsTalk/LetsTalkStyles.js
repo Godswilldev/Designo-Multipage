@@ -28,6 +28,11 @@ export const Talk = styled.div`
         margin: 4rem 0;
       }
     }
+    @media ${device.mobileL} {
+      br {
+        display: none;
+      }
+    }
   }
 
   @media ${device.laptop} {
