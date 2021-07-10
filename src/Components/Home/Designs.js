@@ -68,7 +68,7 @@ const Design = styled.div`
 
 const Designs = () => {
   return (
-    <Design>
+    <Design id="designs">
       <Link to="/web" className="web">
         <h1>Web design</h1>
         <p>View projects</p>
